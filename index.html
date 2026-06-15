@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Nexus-17 Student Directory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- থ্রি-ডট আইকন -->
+    <div class="menu-icon" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- সাইডবার প্যানেল -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="index.html">🏠 Home</a>
+        <a href="news.html">📰 Global Tech Feed</a>
+        <a href="#" onclick="openForm(); toggleSidebar();">➕ Add Student</a>
+    </div>
+
+    <!-- টিংকার (নিউজ বাটন) -->
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>🚀 Neural Nexus-17 Official Portal Launched!</span>
+            <span>🎓 Computer Science & Engineering, Jagannath University</span>
+            <span>💻 Keep your profile updated for official registration</span>
+        </div>
+    </div>
+
+    <!-- হিরো সেকশন -->
+    <header class="hero">
+        <h1>Neural Nexus-17</h1>
+        <p>CSE Department, Jagannath University</p>
+        <div id="digitalClock" style="margin-top: 15px; font-weight: 500; color: #38bdf8;"></div>
+        <div style="margin-top: 25px;">
+            <a href="news.html" class="portal-btn">Go to Live Tech News 📰</a>
+        </div>
+    </header>
+
+    <!-- স্ট্যাটিস্টিকস সেকশন -->
+    <section class="stats-section">
+        <div class="stat-box">
+            <h2 id="totalStudents">0</h2>
+            <p>Total Students</p>
+        </div>
+        <div class="stat-box" style="border-color: #38bdf8;">
+            <h2 id="maleCount" style="color: #38bdf8;">0</h2>
+            <p>Male Students</p>
+        </div>
+        <div class="stat-box" style="border-color: #f472b6;">
+            <h2 id="femaleCount" style="color: #f472b6;">0</h2>
+            <p>Female Students</p>
+        </div>
+    </section>
+
+    <!-- সার্চ ও ফিল্টার টপ বার -->
+    <div class="top-bar">
+        <input type="text" id="searchInput" placeholder="Search by name...">
+        <select id="filterSelect">
+            <option value="all">All Genders</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button class="add-btn" onclick="openForm()">➕ Add Profile</button>
+    </div>
+
+    <!-- স্টুডেন্ট কার্ডস গ্রিড -->
+    <main class="students" id="studentContainer"></main>
+
+<!-- ব্যাচ মেমোরি গ্যালারি সেকশন (আপডেটেড) -->
+    <section style="padding: 50px 20px; text-align: center;">
+        <h2 style="color: #38bdf8; margin-bottom: 25px; font-size: 1.8rem; letter-spacing: 1px;">📸 Batch Memory Gallery 📸</h2>
+        <!-- ছবিগুলো যেন বড় আকারে সুন্দর দেখায় সেজন্য minmax সাইজ ২৬০ পিক্সেল করা হয়েছে -->
+        <div id="galleryDisplay" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; padding: 10px;"></div>
+    </section>
+   <!-- ব্যাচ ভিডিও সেকশন (গ্যালারির নিচে যুক্ত করুন) -->
+    <section style="padding: 60px 20px; text-align: center; background: rgba(255, 255, 255, 0.01); border-top: 1px solid rgba(56, 189, 248, 0.1); border-bottom: 1px solid rgba(56, 189, 248, 0.1);">
+        <h2 style="color: #38bdf8; margin-bottom: 25px; font-size: 1.8rem; letter-spacing: 1px;">🎬 Batch Intro Video 🎬</h2>
+        
+        <div class="video-container">
+            <!-- controls অ্যাট্রিবিউট ব্যবহারের ফলে প্লে, পজ এবং সাউন্ড অপশন পাওয়া যাবে -->
+            <video class="video-box" controls poster="moment1.jpg"> <!-- poster-এ যেকোনো একটি ছবির নাম দিলে সেটি থাম্বনেইল হিসেবে দেখাবে -->
+                <source src="video.mp4" type="video/mp4"> <!-- ভিডিও ফাইলের নাম -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- স্টুডেন্ট যোগ করার পপআপ ফর্ম -->
+    <div id="formBox" class="popup">
+        <div class="popup-content">
+            <h3 style="color: #38bdf8; text-align: center; margin-bottom: 15px;">Add Student Profile</h3>
+            <input type="text" id="newName" placeholder="Full Name *" required>
+            <select id="newGender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <input type="text" id="newSchool" placeholder="School Name">
+            <input type="text" id="newCollege" placeholder="College Name">
+            <input type="text" id="newPresentAddress" placeholder="Present Address">
+            <input type="text" id="newPermanentAddress" placeholder="Permanent Address">
+            <input type="text" id="newFb" placeholder="Facebook Profile Link">
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <button class="add-btn" onclick="addStudent()" style="flex: 1;">Save Profile</button>
+                <button class="add-btn" onclick="closeForm()" style="background: #ef4444; color: white; flex: 1;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ফুট সেকশন -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h3>Neural Nexus-17</h3>
+            <p>Empowering Innovation & Technology</p>
+            <p style="font-size: 12px; opacity: 0.5; margin-top: 15px;">&copy; 2026 Jagannath University CSE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ব্যাক টু টপ বাটন -->
+    <button id="backToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 30px; right: 30px; background: #38bdf8; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; color: #0b132b; font-weight: bold; font-size: 20px; z-index: 999;">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
