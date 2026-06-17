@@ -389,6 +389,16 @@ const initialStudents = [
     permanentAddress: "Narail",
     fb: "https://www.facebook.com/share/1ELbm3NPmt/",
     gender: "female"
+},
+    {
+    name: "Afriya Jannat Mishu",
+    id: "B250305029",
+    schoolName: "Elenga High School",
+    collegeName: "kumudini govt college",
+    presentAddress: "Tanti bazar, Dhaka",
+    permanentAddress: "Elenga, Tangail",
+    fb: "https://www.facebook.com/profile.php?id=61560490016068",
+    gender: "female"
 }
 ];
 
