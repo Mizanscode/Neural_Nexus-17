@@ -1,6 +1,26 @@
 // ১. স্টুডেন্টদের ডিফল্ট তথ্য (আইডি/রোল সহ ৩৮ জন শিক্ষার্থীর আপডেটেড ডাটা)
 const initialStudents = [
     {
+        name: "MD SHAMIM UL FAHAD MONDAL TITUMIR(CR)",
+        id: "B250305024",
+        schoolName: "Govt. Aditmari Girija Sankar Model School and College",
+        collegeName: "Amena Baki Residential Model School & College",
+        presentAddress: "Kagojitola Social Club, Sutrapur, Puran Dhaka",
+        permanentAddress: "Kharuvanj, Sarpukur, Aditmari, Lalmonirhat",
+        fb: "https://www.facebook.com/shamim.ul.fahad.titumir?mibextid=ZbWKwL",
+        gender: "male"
+    },
+        {
+        name: "Nafisa Rahman Prova(CR)",
+        id: "B250305039",
+        schoolName: "St. Francis Xavier's Girls' School & College",
+        collegeName: "Ideal School & College",
+        presentAddress: "82/D/E, Dinnath Sen Road, Gandaria, Dhaka-1204",
+        permanentAddress: "Malopdia, Sirajdikhan, Munshiganj",
+        fb: "https://www.facebook.com/nafisa.rahman.72238u",
+        gender: "female"
+    },
+    {
         name: "Md. Mizanur Rahman",
         id: "B250305012",
         schoolName: "Tamirul Millat Kamil Madrasah, Tongi, Gazipur",
@@ -270,16 +290,7 @@ const initialStudents = [
         fb: "https://www.facebook.com/fatemahaque.isha",
         gender: "female"
     },
-    {
-        name: "MD SHAMIM UL FAHAD MONDAL TITUMIR",
-        id: "B250305024",
-        schoolName: "Govt. Aditmari Girija Sankar Model School and College",
-        collegeName: "Amena Baki Residential Model School & College",
-        presentAddress: "Kagojitola Social Club, Sutrapur, Puran Dhaka",
-        permanentAddress: "Kharuvanj, Sarpukur, Aditmari, Lalmonirhat",
-        fb: "https://www.facebook.com/shamim.ul.fahad.titumir?mibextid=ZbWKwL",
-        gender: "male"
-    },
+    
     {
         name: "Sumaiya Akter",
         id: "B250305049",
@@ -290,16 +301,7 @@ const initialStudents = [
         fb: "https://www.facebook.com/mimislam.mim.786401?mibextid=ZbWKwL",
         gender: "female"
     },
-    {
-        name: "Nafisa Rahman Prova",
-        id: "B250305039",
-        schoolName: "St. Francis Xavier's Girls' School & College",
-        collegeName: "Ideal School & College",
-        presentAddress: "82/D/E, Dinnath Sen Road, Gandaria, Dhaka-1204",
-        permanentAddress: "Malopdia, Sirajdikhan, Munshiganj",
-        fb: "https://www.facebook.com/nafisa.rahman.72238u",
-        gender: "female"
-    },
+
     {
         name: "Ataur Rahman",
         id: "B250305059",
