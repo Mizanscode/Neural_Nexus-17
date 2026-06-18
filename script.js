@@ -401,6 +401,16 @@ const initialStudents = [
     permanentAddress: "Elenga, Tangail",
     fb: "https://www.facebook.com/profile.php?id=61560490016068",
     gender: "female"
+},
+    {
+    name: "Maroa Murtakin Safa",
+    id: "B250305047",
+    schoolName: "Mirgonj High School",
+    collegeName: "Ramgonj Model degree College",
+    presentAddress: "Lakkhibazar ,Dhaka",
+    permanentAddress: "Lakshmipur",
+    fb: "https://www.facebook.com/share/18jDqvNW5o/",
+    gender: "female"
 }
 ];
 
