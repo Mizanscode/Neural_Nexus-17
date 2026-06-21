@@ -411,9 +411,40 @@ const initialStudents = [
     permanentAddress: "Lakshmipur",
     fb: "https://www.facebook.com/share/18jDqvNW5o/",
     gender: "female"
+},
+    
+
+{
+    name: "Sabikun Nahar Sanjana",
+    id: "B240305009",
+    schoolName: "Narayanganj government girls' high school",
+    collegeName: "Narayanganj government Mohila college",
+    presentAddress: "Mirpara road, godenial, LNC Mills -1432, Narayanganj, Narayanganj shadar",
+    permanentAddress: "Mirpara road, godenial, LNC Mills -1432, Narayanganj, Narayanganj shadar",
+    fb: "https://www.facebook.com/sabikun.nahar.sanjana.2025",
+    gender: "female"
+},
+    {
+    name: "Sabbir Hossain Rifat",
+    id: "B250305035",
+    schoolName: "Mirpur Cantonment Public School & College",
+    collegeName: "Mirpur Cantonment Public School & College",
+    presentAddress: "Pallabi, Mirpur, Dhaka",
+    permanentAddress: "Faridganj, Chandpur",
+    fb: "https://www.facebook.com/sabbir.prime.52",
+    gender: "male"
+},
+    {
+    name: "Tanzina Akter Disha",
+    id: "38",
+    schoolName: "Savar Cantonment public school and college",
+    collegeName: "Savar Cantonment public school and college",
+    presentAddress: "Savar, dhaka",
+    permanentAddress: "Manikganj",
+    fb: "https://www.facebook.com/share/16yKzgzqB1/",
+    gender: "female"
 }
 ];
-
 // ২. লোকাল মেমোরি থেকে ডাটা লোড করা
 let students = JSON.parse(localStorage.getItem("nexus_students")) || initialStudents;
 
